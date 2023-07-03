@@ -147,14 +147,36 @@ nav ul li {
   height: auto;
 }
 p{
- font-size: 2rem; 
+ font-size: 30px; 
+ font-weight: bold;
 }
 .btn{
-  padding: 10px 15px;
+  padding: 15px 20px;
 font-size: 15px;
+border: none;
+border-radius: 10px ;
 }
 .btn:hover {
   color: rgb(145, 24, 24);
   cursor: grab;
   background-color: rgb(78, 80, 80);
+}
+.movie-title {
+  font-size: 40px;
+  margin-top: 1cm;
+  background-color: #7e1c33;
+  padding: 10px;
+  width: 15cm;
+}
+.movie-title:hover{
+  background-color: #3e322c;
+  cursor: grabbing;
+}
+.tickets-left {
+  display: inline-block;
+  background-color: #f8f8f8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #333;
+  font-weight: bold;
 }

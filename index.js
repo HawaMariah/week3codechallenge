@@ -11,23 +11,24 @@ const renderPosts = async () => {
     let ticketsLeft = film.capacity - film.tickets_sold;
 
     template += `
-      <div class="movies">
-        <h2 class="movie-title">${film.title}</h2>
-        <div class="movie-details" style="display: none;">
-          <p>Starts: ${film.showtime}</p>
-          <p>Duration: ${film.runtime} minutes</p>
-          <p>Seats: ${film.capacity}</p>
-          <p>Tickets sold: ${film.tickets_sold}</p>
-          <p>Tickets left: <span class="tickets-left">${ticketsLeft}</span></p>
-          <p>Description: ${film.description}</p>
-          <button class="btn">Buy Ticket</button>
-          <img src="${film.poster}">
-        </div>
-      </div>
+    <div class="movies">
+    <h2 class="movie-title">${film.title}</h2>
+    <div class="movie-details" style="display: none;">
+      <p>Starts: ${film.showtime}</p>
+      <p>Duration: ${film.runtime} minutes</p>
+      <p>Seats: ${film.capacity}</p>
+      <p>Description: ${film.description}</p>
+      <p>Tickets left: <span class="tickets-left">${ticketsLeft}</span></p>
+      <button class="btn">Buy Ticket</button>
+      <img src="${film.poster}">
+    </div>
+  </div>
+  
     `;
   });
   film.innerHTML = template;
 
+  // Function to hide movie titles and details
   function hideMovieTitlesAndDetails() {
     const movieTitles = document.querySelectorAll(".movie-title");
     movieTitles.forEach((title) => {
@@ -41,7 +42,7 @@ const renderPosts = async () => {
   const homeMenuItem = document.getElementById("home");
 homeMenuItem.addEventListener("click", hideMovieTitlesAndDetails);
 
-  
+  // Function to show available movies
 function showAvailableMovies() {
   const movieTitles = document.querySelectorAll(".movie-title");
   movieTitles.forEach((title) => {
@@ -57,6 +58,7 @@ availableMoviesMenuItem.addEventListener("click", showAvailableMovies);
 
 
 
+  // Function to toggle movie details visibility
 function toggleMovieDetails() {
   const movieTitles = document.querySelectorAll(".movie-title");
 
@@ -70,7 +72,7 @@ function toggleMovieDetails() {
 toggleMovieDetails();
 
 
-
+  // Function to handle ticket button click
 function handleTicketButtonClick(films) {
   const ticketBtn = document.querySelectorAll(".btn");
 
