@@ -26,7 +26,7 @@ This project is licensed under the MIT License
 The Movie Ticket Booking app was developed using HTML, CSS, and JavaScript. It utilizes the Fetch API for data retrieval.
 
 # Contact
-For any questions or inquiries, please contact [Hawa Maria] at [hawamaria@gmail.com].
+For any questions or inquiries, please contact Hawa Maria at hawamaria@gmail.com.
 
 
 
